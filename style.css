@@ -52,3 +52,23 @@ section {
   border-radius: 50px;
   transform: translate(-50%, -50%);
 }
+
+.cursor::before {
+  background-color: rgb(255, 255, 255);
+}
+
+.cursor.click::before {
+  animation: click 1s ease forwards;
+  background-color: rgb(255, 255, 255);
+}
+
+@keyframes click {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(7);
+  }
+}
